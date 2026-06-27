@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>祝福表格</title>
+<style>
+  body { margin: 0; font-family: -apple-system, "Microsoft YaHei", sans-serif; background: #1a1a1a; color: #e0e0e0; padding: 10px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  thead tr { background: #2d2d2d; color: #fff; }
+  th, td { border: 1px solid #555; padding: 5px 8px; }
+  th { text-align: center; }
+  .num { width: 40px; text-align: center; }
+  .name { width: 70px; text-align: center; }
+  .sub { width: 40px; text-align: center; }
+  td[rowspan] { vertical-align: middle; text-align: center; background: #252525; font-weight: bold; }
+  tbody tr td:nth-child(3),
+  tbody tr td:first-child:nth-last-child(2) { text-align: center; }
+  tr:nth-child(even) td { background: rgba(255,255,255,0.03); }
+  td[rowspan] { background: #252525 !important; }
+</style>
+</head>
+<body>
+<div class="grid">
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">神名</th><th class="sub">子骰</th><th>祝福</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">1</td><td rowspan="6">宙斯</td><td>1</td><td>可以从天空召唤闪电</td></tr>
+<tr><td>2</td><td>可以让一个区域遭受风暴的肆虐</td></tr>
+<tr><td>3</td><td>可以伪装成一只普通的鸟</td></tr>
+<tr><td>4</td><td>可以模仿声音</td></tr>
+<tr><td>5</td><td>神圣显现：直接注视它将触发日间或夜间动作</td></tr>
+<tr><td>6</td><td>在风暴云上旅行</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">神名</th><th class="sub">子骰</th><th>祝福</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">2</td><td rowspan="6">赫拉</td><td>1</td><td>助产士：如果它在虚空谜案中出现，复杂度增加2</td></tr>
+<tr><td>2</td><td>使你剧烈呕吐，并给你造成恶心状况</td></tr>
+<tr><td>3</td><td>使你产生嫉妒状况</td></tr>
+<tr><td>4</td><td>使你立刻分娩，即使你没有怀孕或者没有怀孕的能力</td></tr>
+<tr><td>5</td><td>击杀你的爱情伴侣</td></tr>
+<tr><td>6</td><td>将你传送到一个洞穴，在触发动作时总是被视为夜晚</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">神名</th><th class="sub">子骰</th><th>祝福</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">3</td><td rowspan="6">波塞冬</td><td>1</td><td>可以使你脚下的土地裂开</td></tr>
+<tr><td>2</td><td>可以召唤致命的海生生物到它身边</td></tr>
+<tr><td>3</td><td>可以召唤一群野马</td></tr>
+<tr><td>4</td><td>可以将你困在一个海水中球体中</td></tr>
+<tr><td>5</td><td>可以召唤一个漂浮的眼睛，用灼热的射线烧伤你</td></tr>
+<tr><td>6</td><td>可以将一群人分开，将他们放置在环境中的不同岛屿上</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">神名</th><th class="sub">子骰</th><th>祝福</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">4</td><td rowspan="6">德墨忒耳</td><td>1</td><td>可以引起附近植物快速、不受控制地生长</td></tr>
+<tr><td>2</td><td>一个小区域内所有生命都会枯萎成灰烬</td></tr>
+<tr><td>3</td><td>德墨忒耳-地底：如果它在虚空谜案中出现，此后所有的掷骰都将处于劣势</td></tr>
+<tr><td>4</td><td>德墨忒耳-复仇女神：可以用神秘行动对助产士产生影响</td></tr>
+<tr><td>5</td><td>德墨忒耳-阿加尼佩：你被噩梦困扰，并给你造成噩梦状况</td></tr>
+<tr><td>6</td><td>可以将你传送到一个阳光明媚的玉米地迷宫，在触发动作时总是被视为夜晚</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">神名</th><th class="sub">子骰</th><th>祝福</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">5</td><td rowspan="6">雅典娜</td><td>1</td><td>帕拉斯：如果它在虚空谜案中出现，命案专家必须克服它，然后才能面对助产士</td></tr>
+<tr><td>2</td><td>戈耳工头：如果被命案专家击败，其中一人将戈耳工头，一种保护性护身符，添加到她的温馨小天地</td></tr>
+<tr><td>3</td><td>织工：它使蜘蛛从你身上爬出来，你获得蜘蛛巢状况</td></tr>
+<tr><td>4</td><td>可以召唤一个发光的金色盾牌作为保护</td></tr>
+<tr><td>5</td><td>可以传送你到一个神庙，在那里你将因你的罪行接受审判</td></tr>
+<tr><td>6</td><td>你可以与它理性交流；你可以尝试用理智进行日间或夜间动作，以说服它回到它来的地方</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">神名</th><th class="sub">子骰</th><th>祝福</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">6</td><td rowspan="6">阿波罗</td><td>1</td><td>福波斯阿波罗：它发出耀眼的亮光</td></tr>
+<tr><td>2</td><td>可以让任何人或物体瞬间起火</td></tr>
+<tr><td>3</td><td>你梦见某事成真，并给你造成预言梦状况</td></tr>
+<tr><td>4</td><td>少年：它被一群英俊、年轻的男性战士陪伴</td></tr>
+<tr><td>5</td><td>用一把燃烧的黄金剑战斗</td></tr>
+<tr><td>6</td><td>可以诱惑它；你可以尝试用仪态进行日间或夜间动作，以说服它回到它来的地方</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">神名</th><th class="sub">子骰</th><th>祝福</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">7</td><td rowspan="6">阿尔忒弥斯</td><td>1</td><td>你被标记为猎物，并给你造成猎物状况</td></tr>
+<tr><td>2</td><td>用弓箭战斗，可以从任何距离或任何掩护处射击</td></tr>
+<tr><td>3</td><td>可以让箭雨从天而降</td></tr>
+<tr><td>4</td><td>可以立即将白天变成黑夜</td></tr>
+<tr><td>5</td><td>金箭：如果被命案专家击败，其中一人将阿尔忒弥斯之箭添加到她的温馨小天地</td></tr>
+<tr><td>6</td><td>可以把你传送到一个月光下的狩猎场，在触发动作时总是被视为夜晚</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">神名</th><th class="sub">子骰</th><th>祝福</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">8</td><td rowspan="6">阿瑞斯</td><td>1</td><td>能从地面召唤全副武装的战士</td></tr>
+<tr><td>2</td><td>德摩斯和福波斯：你被施加了状况：恐惧</td></tr>
+<tr><td>3</td><td>阿瑞亚的雅典娜：它用血淋淋的盾牌和长矛战斗</td></tr>
+<tr><td>4</td><td>宙斯的阿瑞亚：它能使一个区域遭受血雨之苦</td></tr>
+<tr><td>5</td><td>阿瑞亚的阿佛洛狄忒：它使你的心脏猛烈地将血液泵出你的身体</td></tr>
+<tr><td>6</td><td>阿瑞亚的阿波罗：它使太阳变成血红色，在触发动作时总是被视为夜晚</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">神名</th><th class="sub">子骰</th><th>祝福</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">9</td><td rowspan="6">赫菲斯托斯</td><td>1</td><td>伴随着熔岩流</td></tr>
+<tr><td>2</td><td>用熔岩石锤战斗</td></tr>
+<tr><td>3</td><td>用无法用常规手段逃脱的银色网战斗</td></tr>
+<tr><td>4</td><td>伴随着一队发条战士</td></tr>
+<tr><td>5</td><td>能使一个区域变得难以忍受的热</td></tr>
+<tr><td>6</td><td>能使无生命的物体活过来</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">神名</th><th class="sub">子骰</th><th>祝福</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">10</td><td rowspan="6">阿佛洛狄忒</td><td>1</td><td>爱神厄洛斯：它可以使命案专家在其虚空之冠上添加以下选项：厄洛斯的印记：叙述一个当前的场景，展示你如何与仆从满足你的身体欲望</td></tr>
+<tr><td>2</td><td>可以退入一个保护性的海贝壳中</td></tr>
+<tr><td>3</td><td>希墨洛斯：可以使命案专家在其聚会结束问题中添加以下内容（总是被标记）：你是否因为感觉良好而与某人做爱？</td></tr>
+<tr><td>4</td><td>使你遭受状况：恶臭</td></tr>
+<tr><td>5</td><td>将你传送到海边</td></tr>
+<tr><td>6</td><td>金苹果：如果被命案专家击败，她们可以将金苹果添加到她们的温馨小天地</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">神名</th><th class="sub">子骰</th><th>祝福</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">11</td><td rowspan="6">赫尔墨斯</td><td>1</td><td>宣告者：斑木湾的人民走出家门，满怀欣喜地等待珀耳塞福涅的子嗣</td></tr>
+<tr><td>2</td><td>能飞行</td></tr>
+<tr><td>3</td><td>能以超自然般的速度移动</td></tr>
+<tr><td>4</td><td>灵魂引导者：如果它出现在虚空谜案中，命案专家们只能选择虚空之冠上的虚空</td></tr>
+<tr><td>5</td><td>信使：可以通过插手行动对它进行咨询</td></tr>
+<tr><td>6</td><td>赫尔墨斯神像：无论它出现在哪里，任何人都无法进入或离开</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">神名</th><th class="sub">子骰</th><th>祝福</th></tr></thead>
+<tbody>
+<tr><td>12</td><td>狄俄尼索斯</td><td>特殊</td><td>详见守秘人规则书中的详细描述</td></tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

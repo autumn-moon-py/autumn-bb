@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>类型表格</title>
+<style>
+  body { margin: 0; font-family: -apple-system, "Microsoft YaHei", sans-serif; background: #1a1a1a; color: #e0e0e0; padding: 10px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  thead tr { background: #2d2d2d; color: #fff; }
+  th, td { border: 1px solid #555; padding: 5px 8px; }
+  th { text-align: center; }
+  .num { width: 40px; text-align: center; }
+  .type { width: 70px; text-align: center; }
+  .sub { width: 40px; text-align: center; }
+  td[rowspan] { vertical-align: middle; text-align: center; background: #252525; font-weight: bold; }
+  tbody tr td:nth-child(3),
+  tbody tr td:first-child:nth-last-child(2) { text-align: center; }
+  tr:nth-child(even) td { background: rgba(255,255,255,0.03); }
+  td[rowspan] { background: #252525 !important; }
+</style>
+</head>
+<body>
+<div class="grid">
+<table>
+<thead><tr><th class="num">骰子</th><th class="type">类型</th><th class="sub">子骰</th><th>外观</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">1</td><td rowspan="6">龙</td><td>1</td><td>两端都有头的巨龙</td></tr>
+<tr><td>2</td><td>龙身的人</td></tr>
+<tr><td>3</td><td>有龙形态（头发/手臂/舌头/眼睛/两种结合）的人</td></tr>
+<tr><td>4</td><td>巨大的龙骷髅</td></tr>
+<tr><td>5</td><td>有着鳞片和分叉舌头的人</td></tr>
+<tr><td>6</td><td>巨大的缠结在一起的龙球</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="type">类型</th><th class="sub">子骰</th><th>外观</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">2</td><td rowspan="6">牛</td><td>1</td><td>牛头人</td></tr>
+<tr><td>2</td><td>下半身是牛的人</td></tr>
+<tr><td>3</td><td>牛角上插着人的牛</td></tr>
+<tr><td>4</td><td>有角和蹄子的战士</td></tr>
+<tr><td>5</td><td>没有头和腿的牛躯体</td></tr>
+<tr><td>6</td><td>骷髅牛</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="type">类型</th><th class="sub">子骰</th><th>外观</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">3</td><td rowspan="6">鸟</td><td>1</td><td>巨鸟（乌鸦/鹅/鹰/猫头鹰/其他）</td></tr>
+<tr><td>2</td><td>人形鸟（乌鸦/鹅/鹰/猫头鹰/其他）</td></tr>
+<tr><td>3</td><td>有着（翅膀/喙/羽毛/爪/两种结合）的人</td></tr>
+<tr><td>4</td><td>一大团集群（乌鸦/鹅/鹰/猫头鹰/其他）</td></tr>
+<tr><td>5</td><td>一个被（乌鸦/鹅/鹰/秃鹫/其他）啄食至死的人</td></tr>
+<tr><td>6</td><td>巨大的骷髅秃鹫</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="type">类型</th><th class="sub">子骰</th><th>外观</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">4</td><td rowspan="6">猫</td><td>1</td><td>狮子</td></tr>
+<tr><td>2</td><td>老虎</td></tr>
+<tr><td>3</td><td>黑豹</td></tr>
+<tr><td>4</td><td>家猫</td></tr>
+<tr><td>5</td><td>野猫群</td></tr>
+<tr><td>6</td><td>猫头人（狮子/老虎/黑豹/家猫/其他）</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="type">类型</th><th class="sub">子骰</th><th>外观</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">5</td><td rowspan="6">猎犬/狼</td><td>1</td><td>猎犬或狼</td></tr>
+<tr><td>2</td><td>狼头人</td></tr>
+<tr><td>3</td><td>一群狼</td></tr>
+<tr><td>4</td><td>行为像狗的人</td></tr>
+<tr><td>5</td><td>带着猎犬的人</td></tr>
+<tr><td>6</td><td>骷髅猎犬或狼</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="type">类型</th><th class="sub">子骰</th><th>外观</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">6</td><td rowspan="6">海洋生物</td><td>1</td><td>巨型甲壳类动物（螃蟹/龙虾/海虱/对虾/其他）</td></tr>
+<tr><td>2</td><td>巨型海葵</td></tr>
+<tr><td>3</td><td>巨型头足类动物（章鱼/乌贼/鱿鱼/鹦鹉螺/其他）</td></tr>
+<tr><td>4</td><td>巨型水母</td></tr>
+<tr><td>5</td><td>鳗鱼集群</td></tr>
+<tr><td>6</td><td>巨型灯笼鱼</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="type">类型</th><th class="sub">子骰</th><th>外观</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">7</td><td rowspan="6">人形生物</td><td>1</td><td>诱惑者</td></tr>
+<tr><td>2</td><td>隐士/老妇</td></tr>
+<tr><td>3</td><td>漂亮的青年</td></tr>
+<tr><td>4</td><td>强壮的战士</td></tr>
+<tr><td>5</td><td>巨人</td></tr>
+<tr><td>6</td><td>骗子</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="type">类型</th><th class="sub">子骰</th><th>外观</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">8</td><td rowspan="6">马</td><td>1</td><td>公马</td></tr>
+<tr><td>2</td><td>独角兽</td></tr>
+<tr><td>3</td><td>半人马</td></tr>
+<tr><td>4</td><td>飞马</td></tr>
+<tr><td>5</td><td>骑马的战士</td></tr>
+<tr><td>6</td><td>海马</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="type">类型</th><th class="sub">子骰</th><th>外观</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">9</td><td rowspan="6">野猪</td><td>1</td><td>巨型野猪，其硬鬃毛上插着受害者</td></tr>
+<tr><td>2</td><td>野猪头人</td></tr>
+<tr><td>3</td><td>有着（獠牙/小眼睛/硬鬃毛/猪鼻/两种结合）的人</td></tr>
+<tr><td>4</td><td>巨型野猪，其内脏从肚子里溢出</td></tr>
+<tr><td>5</td><td>巨型双口野猪</td></tr>
+<tr><td>6</td><td>穿着野猪皮甲和盾牌的战士</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="type">类型</th><th class="sub">子骰</th><th>外观</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">10</td><td rowspan="6">巨蜥蜴</td><td>1</td><td>鸡龙</td></tr>
+<tr><td>2</td><td>龙身带爪的蜥蜴</td></tr>
+<tr><td>3</td><td>鳄鱼</td></tr>
+<tr><td>4</td><td>双足恐怖的</td></tr>
+<tr><td>5</td><td>边缘有刺的</td></tr>
+<tr><td>6</td><td>有角的</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="type">类型</th><th class="sub">子骰</th><th>外观</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">11</td><td rowspan="6">反刍动物</td><td>1</td><td>公羊头人</td></tr>
+<tr><td>2</td><td>穿着公羊皮的野人</td></tr>
+<tr><td>3</td><td>羊头智者</td></tr>
+<tr><td>4</td><td>羚羊或雄伟的公鹿</td></tr>
+<tr><td>5</td><td>漂浮的、无身体的头（公羊/羊/河马/驯鹿/其他）</td></tr>
+<tr><td>6</td><td>有羊角和蹄子的人</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="type">类型</th><th class="sub">子骰</th><th>外观</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">12</td><td rowspan="6">熊</td><td>1</td><td>覆盖着符文的</td></tr>
+<tr><td>2</td><td>胸腔打开的</td></tr>
+<tr><td>3</td><td>可分离的、漂浮的头</td></tr>
+<tr><td>4</td><td>骑着熊的战士</td></tr>
+<tr><td>5</td><td>直立行走的</td></tr>
+<tr><td>6</td><td>穿着熊皮的野人</td></tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

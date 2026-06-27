@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>恶形表格</title>
+<style>
+  body { margin: 0; font-family: -apple-system, "Microsoft YaHei", sans-serif; background: #1a1a1a; color: #e0e0e0; padding: 10px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  thead tr { background: #2d2d2d; color: #fff; }
+  th, td { border: 1px solid #555; padding: 5px 8px; }
+  th { text-align: center; }
+  .num { width: 40px; text-align: center; }
+  .name { width: 70px; text-align: center; }
+  .sub { width: 40px; text-align: center; }
+  td[rowspan] { vertical-align: middle; text-align: center; background: #252525; font-weight: bold; }
+  tbody tr td:nth-child(3),
+  tbody tr td:first-child:nth-last-child(2) { text-align: center; }
+  tr:nth-child(even) td { background: rgba(255,255,255,0.03); }
+  td[rowspan] { background: #252525 !important; }
+</style>
+</head>
+<body>
+<div class="grid">
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">恶形名</th><th class="sub">子骰</th><th>描述</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">1</td><td rowspan="6">普罗米修斯</td><td>1</td><td>不断地诞生出呻吟的泥人</td></tr>
+<tr><td>2</td><td>被一块巨石绑住</td></tr>
+<tr><td>3</td><td>被一只鹰啄食；如果是鸟的类型，它不断地呕吐肝脏</td></tr>
+<tr><td>4</td><td>头顶有一个火焰的光环</td></tr>
+<tr><td>5</td><td>要求进行动物祭祀仪式</td></tr>
+<tr><td>6</td><td>发出像燃烧的火焰般的声音</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">恶形名</th><th class="sub">子骰</th><th>描述</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">2</td><td rowspan="6">米达斯</td><td>1</td><td>眼睛燃烧着金色的火焰</td></tr>
+<tr><td>2</td><td>熔化的黄金从它的孔穴中流出</td></tr>
+<tr><td>3</td><td>被玫瑰和荆棘覆盖</td></tr>
+<tr><td>4</td><td>头顶有一个金色的火焰冠冕</td></tr>
+<tr><td>5</td><td>乞求被喂养</td></tr>
+<tr><td>6</td><td>像驴子一样嘶叫</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">恶形名</th><th class="sub">子骰</th><th>描述</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">3</td><td rowspan="6">伊卡洛斯</td><td>1</td><td>由木头、齿轮和蜡制成</td></tr>
+<tr><td>2</td><td>被滚烫的蜡覆盖</td></tr>
+<tr><td>3</td><td>眼睛燃烧着太阳的光芒，发出尖叫声</td></tr>
+<tr><td>4</td><td>不断地在水面上沉浮</td></tr>
+<tr><td>5</td><td>翅膀无用；如果是鸟的类型，它的翅膀受损</td></tr>
+<tr><td>6</td><td>被羽毛覆盖；如果是鸟的类型，它的羽毛着火</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">恶形名</th><th class="sub">子骰</th><th>描述</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">4</td><td rowspan="6">欧律狄刻</td><td>1</td><td>孔穴中滴落着黑色的血液</td></tr>
+<tr><td>2</td><td>发出悲伤的音乐</td></tr>
+<tr><td>3</td><td>总是在你身后，不被看见且在哀悼</td></tr>
+<tr><td>4</td><td>是一个无形的阴影</td></tr>
+<tr><td>5</td><td>可以听到猎犬的吠叫声；如果是猎犬/狼类型，它有三个头或成三只出现</td></tr>
+<tr><td>6</td><td>有美丽的歌声</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">恶形名</th><th class="sub">子骰</th><th>描述</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">5</td><td rowspan="6">塞墨勒</td><td>1</td><td>有着被烧焦的身体，散发着臭氧的味道</td></tr>
+<tr><td>2</td><td>酒从它的孔穴中流出</td></tr>
+<tr><td>3</td><td>一个老妇人不断地从它身上撕扯出来；如果是人形生物类型，它的投影是一个怪异的老妇人</td></tr>
+<tr><td>4</td><td>首先以公牛的形象出现，然后从公牛的身体中撕裂出来；如果是牛类型，它的身体上有伤口流血</td></tr>
+<tr><td>5</td><td>以心脏为食</td></tr>
+<tr><td>6</td><td>与一只巨大的鹰热烈拥抱；如果是鸟的类型，它发出激情的声音</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">恶形名</th><th class="sub">子骰</th><th>描述</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">6</td><td rowspan="6">提托诺斯</td><td>1</td><td>不断衰老到变成灰尘，然后不断重生</td></tr>
+<tr><td>2</td><td>被一群蝉包围</td></tr>
+<tr><td>3</td><td>乞求被杀死</td></tr>
+<tr><td>4</td><td>是里面有大蝉的茧</td></tr>
+<tr><td>5</td><td>前面有一对闪亮的门</td></tr>
+<tr><td>6</td><td>从地下挖出来</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">恶形名</th><th class="sub">子骰</th><th>描述</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">7</td><td rowspan="6">梅加拉</td><td>1</td><td>它被三个跳动的心脏包围</td></tr>
+<tr><td>2</td><td>受伤和流血的孩子跟随它，或者从它身上产出</td></tr>
+<tr><td>3</td><td>悲伤地哀嚎：看，这是第十三项任务！</td></tr>
+<tr><td>4</td><td>发出像受惊的牛一样的声音</td></tr>
+<tr><td>5</td><td>看不见的弓箭手射出的箭穿透它的身体</td></tr>
+<tr><td>6</td><td>被火焰环绕</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">恶形名</th><th class="sub">子骰</th><th>描述</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">8</td><td rowspan="6">菲阿特隆</td><td>1</td><td>交替着燃烧和冻结，反复循环</td></tr>
+<tr><td>2</td><td>流出琥珀色的眼泪</td></tr>
+<tr><td>3</td><td>由炽热的沙制成</td></tr>
+<tr><td>4</td><td>由冰和霜制成</td></tr>
+<tr><td>5</td><td>哀悼的女人跟随它，或者从它身上产出</td></tr>
+<tr><td>6</td><td>带着一个破碎的马车轮，或者绑在身上</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">恶形名</th><th class="sub">子骰</th><th>描述</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">9</td><td rowspan="6">阿拉克涅</td><td>1</td><td>悬挂在一个绳索上，或者被绳索纠缠</td></tr>
+<tr><td>2</td><td>有太多的眼睛</td></tr>
+<tr><td>3</td><td>蛾子和苍蝇从它身上产出</td></tr>
+<tr><td>4</td><td>有八条蜘蛛般的附肢</td></tr>
+<tr><td>5</td><td>被多色线捆绑</td></tr>
+<tr><td>6</td><td>在布满描绘斑木湾历史的织锦的地方筑巢</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">恶形名</th><th class="sub">子骰</th><th>描述</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">10</td><td rowspan="6">莱安德</td><td>1</td><td>总是被一个奇怪地方出现的灯笼所引导</td></tr>
+<tr><td>2</td><td>光被吸进它的身体并熄灭</td></tr>
+<tr><td>3</td><td>伴随着远处的雷暴声</td></tr>
+<tr><td>4</td><td>海水从它的孔穴中流出</td></tr>
+<tr><td>5</td><td>湿沙从它的身体上脱落</td></tr>
+<tr><td>6</td><td>当你眯起眼睛时，你总能从远处看到它</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">恶形名</th><th class="sub">子骰</th><th>描述</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">11</td><td rowspan="6">俄狄浦斯</td><td>1</td><td>认为一个命案专家是它的母亲</td></tr>
+<tr><td>2</td><td>眼睛受伤</td></tr>
+<tr><td>3</td><td>对将要被它吞噬的人说谜语</td></tr>
+<tr><td>4</td><td>被羊毛包裹</td></tr>
+<tr><td>5</td><td>一个断裂的王冠漂浮在它上面</td></tr>
+<tr><td>6</td><td>伴随着羊的咩咩声</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="num">骰子</th><th class="name">恶形名</th><th class="sub">子骰</th><th>描述</th></tr></thead>
+<tbody>
+<tr><td rowspan="6">12</td><td rowspan="6">梅狄亚</td><td>1</td><td>似乎在仪式圈内挣扎</td></tr>
+<tr><td>2</td><td>由青铜制成</td></tr>
+<tr><td>3</td><td>只说谎话</td></tr>
+<tr><td>4</td><td>嘴里咀嚼着儿童的残肢</td></tr>
+<tr><td>5</td><td>一对凶残的年轻妇女伴随它，或者从它身上产出</td></tr>
+<tr><td>6</td><td>流出有毒的绿色液体，散发着草药和番茄藤的味道</td></tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
