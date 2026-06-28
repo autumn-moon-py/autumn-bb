@@ -1,78 +1,20 @@
-# 斑木湾 BGM 推荐指南
+# 清单
 
-根据《斑木湾》的游戏风味——新英格兰海滨小镇、老年妇女侦探、克苏鲁式黑暗阴谋、珀耳塞福涅神话、温馨与恐怖的交织，推荐以下BGM风格和曲目。
+| 跑团场景                     | 推荐                                                         | 额外推荐                                                     |
+| ---------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **日常开场 / 平静角色互动**  | 暗黑民谣、新民谣；Heather Woods Broderick, Brian Eno         | **航海民谣（Sea Shanty）器乐版**（如 *The Longest Johns* 纯器乐）；**新英格兰民间小提琴**（如 *Jay Ungar*）；**独立民谣**（*Iron & Wine* 早期）；**极简钢琴**（*Goldmund*） |
+| **现场勘查 / 搜寻线索**      | 暗黑氛围、冷爵士；Bohren & der Club of Gore, Desiderii Marginis | **极简主义电影配乐**（*Jóhann Jóhannsson* — *Sicario* 氛围段）；**悬疑电子**（*Cliff Martinez* — *The Knick*）；**第四世界音乐**（*Jon Hassell* — 处理过的小号与氛围） |
+| **询问NPC / 社交试探**       | 暗色爵士；Bohren & der Club of Gore                          | **黑色电影爵士**（*Miles Davis* — *Ascenseur pour l'échafaud*）；**当代爵士三重奏**（*EST* 慢速曲）；**大提琴与钢琴二重奏**（*Kronos Quartet* 演奏的现代作品） |
+| **图书馆 / 档案研究**        | 氛围音乐、新古典；Kammarheit, Brian Eno                      | **古琴/早期音乐改编**（如 *Stile Antico* 的安静人声）；**管风琴短曲**（*Messiaen* 的慢板）；**极简弦乐**（*Max Richter* — *The Blue Notebooks*） |
+| **跟踪 / 暗中监视**          | 暗黑氛围、后摇滚；Desiderii Marginis                         | **慢速电子**（*Burial* 的氛围碎拍但极低音量）；**重复性工业**（*Coil* — *Time Machines*）；**低音提琴独奏**（*Barry Guy* 即兴） |
+| **遭遇超自然 / 恐怖揭示**    | 暗黑氛围、新古典；Sun of the Sleepless, Empyrium             | **恐怖电影原声**（*Mica Levi* — *Under the Skin* 的刺耳弦乐）；**黑暗氛围经典**（*Lustmord* — *Heresy*）；**波兰现代主义**（*Penderecki* — 弦乐音簇） |
+| **潜行 / 潜入敌营**          | 黑暗新古典、氛围；Kammarheit                                 | **极简序列音乐**（*Steve Reich* — *Electric Counterpoint* 慢速版）；**低音长音Drone**（*Sunn O)))* 的器乐氛围段落）；**工业音景**（*Trent Reznor* — *Gone Girl* 部分） |
+| **追逐 / 逃脱**              | 后摇滚（渐强）；Agalloch 部分                                | **紧张弦乐断奏**（*Bernard Herrmann* — *Psycho* 式但更低沉）；**后摇滚爆发**（*Godspeed You! Black Emperor* 的快板段）；**厄运金属加速**（*Sleep* 的快速连复段） |
+| **对峙 / 交涉谈判**          | 暗色爵士、黑暗新古典；Empyrium                               | **室内歌剧感**（*Kurt Weill* 的暗夜弦乐）；**自由爵士即兴**（*Don Cherry* 的慢板对话）；**大提琴与电子**（*Hildur Guðnadóttir* — *Joker* 中的大提琴） |
+| **物理战斗 / 冲突**          | 厄运金属、维京金属；Amon Amarth                              | **泥浆金属（Sludge Metal）**（*Eyehategod* 器乐段）；**数学摇滚重型化**（*Russian Circles*）；**定音鼓与铜管爆发**（*Stravinsky* — *春之祭* 的祭祀舞） |
+| **解谜 / 破解仪式**          | 新古典、氛围；Kammarheit, Brian Eno                          | **简约序列**（*Terry Riley* — *In C* 但降到极慢）；**巴洛克复调改编**（*Bach* 赋格用管风琴+电子）；**神秘人声**（*Lisa Gerrard* 的个人作品） |
+| **直面邪教 / 集体召唤**      | 黑暗新古典（合唱）；Empyrium, Sun of the Sleepless           | **希腊东正教圣咏**（*Byzantine chant*）；**哥特合唱**（*Dead Can Dance* — 仪式感段落）；**低频管风琴+低语**（*Laibach* 的慢板） |
+| **最终高潮 / 阻止降临**      | 后摇滚、厄运金属；Agalloch, Amon Amarth                      | **史诗氛围黑金属**（*Summoning* 的器乐段落）；**电影结尾式渐强**（*Hans Zimmer* — *Inception* 但小调版）；**铜管与打击乐暴烈**（*John Adams* — *Short Ride in a Fast Machine* 暗黑化） |
+| **结局 / 余波（胜利/失败）** | 暗黑民谣、氛围；Heather Woods Broderick, Brian Eno           | **爱尔兰哨笛独奏**（哀伤）；**空旷的钢琴+海浪录音**（*Ryuichi Sakamoto* — *async* 中的几首）；**室内民谣**（*Vashti Bunyan* 的无词哼唱） |
+| **梦境 / 幻象 / 回忆闪回**   | 氛围、新古典（混响）                                         | **磁带循环（Tape Loop）**（*William Basinski* — *The Disintegration Loops*）；**虚幻合成器**（*Emeralds* 的慢速长音）；**倒放钢琴+水声**（*Vangelis* 的 *Blade Runner* 氛围段） |
 
----
-
-## 推荐音乐风格
-
-1. **暗黑民谣 / 新民谣** — 呼应小镇古朴、民间传说和海岸氛围
-2. **氛围音乐 / 暗黑氛围** — 契合虚空之冠、助产士教派的超自然侵蚀感
-3. **新古典 / 黑暗新古典** — 优雅中透着不安，适合推理场景
-4. **后摇滚（偏暗色调）** — 情绪渐强，适合紧张对峙和高潮
-5. **凯尔特/北欧民谣器乐** — 海滨小镇、古老传说的底色
-
----
-
-## 日常/温馨场景
-
-休闲动作、聚会、小镇漫步
-
-| 曲目 | 艺术家 | 链接 |
-|---|---|---|
-| Midnight Black Earth | Bohren & der Club of Gore | [YouTube](https://www.youtube.com/watch?v=qG-vNzcn96k) / [Spotify](https://open.spotify.com/track/4RWPfyAtyDtA0zebsL2pqc) |
-| Carolina | Heather Woods Broderick | [Spotify](https://open.spotify.com/artist/3MZKv7Zs0tPJ9qm1SJZGNB) |
-| January 07003: Bell Studies for the Clock of the Long Now（专辑） | Brian Eno | [YouTube](https://www.youtube.com/watch?v=Wz3m1wfceC) / [Spotify](https://open.spotify.com/album/0HjMGBv1nRcf3nZf8gXF2e) |
-| The Mantle（专辑） | Agalloch | [YouTube](https://www.youtube.com/watch?v=yJIMgWyeKP8) / [Spotify](https://open.spotify.com/album/2pXbS3yNYLO9PLjVEH2aWr) |
-
-## 推理/调查场景
-
-插手动作、金冠之谜动作
-
-| 曲目 | 艺术家 | 链接 |
-|---|---|---|
-| Sunset Mission（完整专辑，极推） | Bohren & der Club of Gore | [YouTube](https://www.youtube.com/watch?v=1vxl0Yd7TOY) / [Spotify](https://open.spotify.com/album/4KXlqlHBhMmClMDqYeM0kV) |
-| Black Earth（完整专辑，极推） | Bohren & der Club of Gore | [YouTube](https://www.youtube.com/watch?v=qG-vNzcn96k) / [Spotify](https://open.spotify.com/album/7aG5vJNPqFLMNWzMb7g4aA) |
-| Procession | Desiderii Marginis | [YouTube](https://www.youtube.com/watch?v=Xp1K0d0zr1Q) / [Bandcamp](https://desiderii.bandcamp.com/album/procession) |
-| The Starwheel（专辑） | Kammarheit | [Bandcamp](https://kammarheit.bandcamp.com/) |
-
-## 夜间/危险场景
-
-夜间动作、神秘动作
-
-| 曲目 | 艺术家 | 链接 |
-|---|---|---|
-| The Owl | Sun of the Sleepless | [YouTube](https://www.youtube.com/watch?v=QXCgxDR0D_g) / [Bandcamp](https://sun-of-the-sleepless.bandcamp.com/) |
-| Twilight of the Thunder God | Amon Amarth | [Spotify](https://open.spotify.com/track/6ZGtPQmUjLTV5dMfnOPEUo) |
-| Empyrium（暗黑民谣，整张专辑均适合夜间场景） | Empyrium | [Spotify](https://open.spotify.com/artist/1sZfjN9LJ6GRhgVfDbvKVO) / [Bandcamp](https://prophecyproductions.bandcamp.com/) |
-| [ O T H E R ]（专辑，暗黑氛围经典） | Lustmord | [Spotify](https://open.spotify.com/artist/2m7n1R1K1dZxLq7VfV3XqJ) |
-
-## 虚空之冠/超自然高潮
-
-助产士仪式、珀耳塞福涅子嗣
-
-| 曲目 | 艺术家 | 链接 |
-|---|---|---|
-| Helvegen | Wardruna | [YouTube](https://www.youtube.com/watch?v=OdSe0GhEN6I) |
-| Lyfjaberg | Wardruna | [YouTube](https://www.youtube.com/watch?v=VEizKmZlUAw) |
-| Spem in Alium（40声部经文歌） | Tallis Scholars | [YouTube](https://www.youtube.com/watch?v=iT-ZAAi4UQQ) / [Spotify](https://open.spotify.com/album/0jHNPaqNMOFnO3RMdXq3jZ) |
-| Hosannas from the Basements of Hell（专辑） | Killing Joke | [Spotify](https://open.spotify.com/album/2lLkD0mJl0w0XhPOJqbOj9) |
-
-## 女王之冠/情感回忆场景
-
-| 曲目 | 艺术家 | 链接 |
-|---|---|---|
-| Für Alina | Arvo Pärt | [YouTube](https://www.youtube.com/watch?v=qYXkunzWeSM) |
-| Spiegel im Spiegel | Arvo Pärt | [YouTube](https://www.youtube.com/watch?v=ZmcoTNn9YAk) |
-| Tabula Rasa（替代 Limbo） | Arvo Pärt | [Spotify](https://open.spotify.com/artist/2P6ygesd9xg5DPOBnda2jg) |
-| On the Nature of Daylight | Max Richter | [YouTube](https://www.youtube.com/watch?v=InyT9Gyoz_o) |
-| The Last of Us | Gustavo Santaolalla | [YouTube](https://www.youtube.com/watch?v=2LE0yKAU1-M) / [Spotify](https://open.spotify.com/album/0yZIM8l9eqcJz2kFSPJXlB) |
-
----
-
-## 带团实用建议
-
-- **Bohren & der Club of Gore** 的 *Sunset Mission* 和 *Black Earth* 两张专辑可作为推理场景的"常驻BGM"循环播放，极慢的暗黑爵士几乎不会干扰对话
-- **Kammarheit** 和 **Desiderii Marginis** 的专辑适合虚空之冠标记越来越多的后期，氛围从微妙不安逐步升级
-- 女王之冠场景建议用 **Arvo Pärt** 或 **Max Richter** 短曲，3-5分钟刚好覆盖一段回忆叙述
-- 夜间场景切换时，从 Bohren 过渡到 Empyrium 或 Sun of the Sleepless，能自然地让桌面的气氛从"不安"滑向"危险"
