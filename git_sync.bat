@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 :: Multi-repo Git sync tool for Windows
-:: Place in parent directory of repos, double-click to run
+:: Place in repo dir or parent dir, double-click to run
 
 set "SD=%~dp0"
 set "FL="
@@ -12,8 +12,13 @@ echo   Git Multi-Repo Sync Tool
 echo ============================================
 echo.
 
-:: Scan repos
+:: Scan repos (check self first, then sibling dirs)
 set "RC=0"
+if exist "%SD%.git" (
+    set /a RC+=1
+    set "R1=%SD:~0,-1%"
+    echo   [1] %SD:~0,-1%
+)
 for /d %%D in ("%SD%*") do (
     if exist "%%D\.git" (
         set /a RC+=1
@@ -32,17 +37,34 @@ echo.
 echo Found %RC% repo(s).
 echo.
 
+:: --- Main menu ---
+:menu
+echo ============================================
+echo   [1] Fetch + Rebase
+echo   [2] Commit + Push
+echo   [3] All (Fetch, Commit, Push)
+echo   [0] Exit
+echo ============================================
+set /p "C=Choose: "
+if "!C!"=="0" goto :done
+if "!C!"=="1" goto :fetch_phase
+if "!C!"=="2" goto :commit_phase
+if "!C!"=="3" goto :fetch_phase
+echo Invalid choice.
+echo.
+goto :menu
+
 :: --- Fetch + Rebase ---
+:fetch_phase
+echo.
 echo --------------------------------------------
-echo   [1/3] Fetch + Rebase
+echo   Fetch + Rebase
 echo --------------------------------------------
-set /p "C=Start fetch? (Y/n): "
-if /i "!C!"=="n" goto :commit_phase
 
 set "I=0"
 :fetch
 set /a I+=1
-if !I! gtr %RC% goto :commit_phase
+if !I! gtr %RC% goto :fetch_done
 set "P=!R%I%!"
 for %%N in ("!P!") do set "N=%%~nxN"
 echo [!N!]
@@ -69,13 +91,17 @@ popd
 echo.
 goto :fetch
 
-:: --- Commit ---
+:fetch_done
+if "!C!"=="1" goto :done
+
+:: --- Commit + Push ---
 :commit_phase
 echo.
 echo --------------------------------------------
-echo   [2/3] Commit
+echo   Commit + Push
 echo --------------------------------------------
 
+:: Check changes
 set "HC=0"
 set "I=0"
 :check
@@ -100,9 +126,10 @@ if !HC!==0 (
 )
 
 echo.
-set /p "C=Commit changes? (Y/n): "
-if /i "!C!"=="n" goto :push_phase
+set /p "C2=Commit changes? (Y/n): "
+if /i "!C2!"=="n" goto :push_phase
 
+:: Do commit
 set "I=0"
 :commit
 set /a I+=1
@@ -132,10 +159,10 @@ goto :commit
 :push_phase
 echo.
 echo --------------------------------------------
-echo   [3/3] Push
+echo   Push
 echo --------------------------------------------
-set /p "C=Push to remote? (Y/n): "
-if /i "!C!"=="n" goto :done
+set /p "C3=Push to remote? (Y/n): "
+if /i "!C3!"=="n" goto :done
 
 set "I=0"
 :push
