@@ -45,13 +45,12 @@ echo   [2] Commit + Push
 echo   [3] All (Fetch, Commit, Push)
 echo   [0] Exit
 echo ============================================
-set /p "C=Choose: "
-if "!C!"=="0" goto :done
+choice /c 1230 /n /m "Choose: "
+set "C=!errorlevel!"
+if "!C!"=="4" goto :exit
 if "!C!"=="1" goto :fetch_phase
 if "!C!"=="2" goto :commit_phase
 if "!C!"=="3" goto :fetch_phase
-echo Invalid choice.
-echo.
 goto :menu
 
 :: --- Fetch + Rebase ---
@@ -69,7 +68,8 @@ set "P=!R%I%!"
 for %%N in ("!P!") do set "N=%%~nxN"
 echo [!N!]
 pushd "!P!"
-git fetch --all 2>&1
+set "STASHED="
+git fetch --all >nul 2>&1
 if !errorlevel! equ 0 goto :rebase
 echo   [FAIL] fetch
 set "FL=!FL! !N!"
@@ -77,22 +77,47 @@ popd
 echo.
 goto :fetch
 :rebase
-git rebase 2>&1
-if !errorlevel! equ 0 goto :fetch_ok
+git stash --include-untracked >nul 2>&1
+if !errorlevel! equ 0 (
+    set "STASHED=1"
+) else (
+    set "STASHED="
+)
+git rebase >nul 2>&1
+if !errorlevel! equ 0 goto :rebase_ok
 echo   [CONFLICT] rebase skipped
 git rebase --abort >nul 2>&1
+if defined STASHED (
+    git stash pop >nul 2>&1
+    if !errorlevel! neq 0 (
+        echo   [WARN] stash pop conflict, dropping stash
+        git checkout -- . >nul 2>&1
+        git clean -fd >nul 2>&1
+        git stash drop >nul 2>&1
+    )
+)
 set "FL=!FL! !N!"
 popd
 echo.
 goto :fetch
-:fetch_ok
+:rebase_ok
+if defined STASHED (
+    git stash pop >nul 2>&1
+    if !errorlevel! neq 0 (
+        echo   [WARN] stash pop conflict, dropping stash
+        git checkout -- . >nul 2>&1
+        git clean -fd >nul 2>&1
+        git stash drop >nul 2>&1
+    )
+)
 echo   [OK]
 popd
 echo.
 goto :fetch
 
 :fetch_done
-if "!C!"=="1" goto :done
+echo.
+goto :menu
 
 :: --- Commit + Push ---
 :commit_phase
@@ -126,8 +151,8 @@ if !HC!==0 (
 )
 
 echo.
-set /p "C2=Commit changes? (Y/n): "
-if /i "!C2!"=="n" goto :push_phase
+choice /c YN /n /m "Commit changes? (Y/n): "
+if !errorlevel! equ 2 goto :push_phase
 
 :: Do commit
 set "I=0"
@@ -143,8 +168,8 @@ for %%N in ("!P!") do set "N=%%~nxN"
 for /f "tokens=1-3 delims=/ " %%a in ("%date:~0,10%") do set "TD=%%a-%%b-%%c"
 set "TM=%time:~0,5%"
 set "MSG=update: !CC! files changed (!TD! !TM!)"
-git add -A
-git commit -m "!MSG!" 2>&1
+git add -A >nul 2>&1
+git commit -m "!MSG!" >nul 2>&1
 if !errorlevel! equ 0 (
     echo   [!N!] committed: !MSG!
 ) else (
@@ -161,26 +186,79 @@ echo.
 echo --------------------------------------------
 echo   Push
 echo --------------------------------------------
-set /p "C3=Push to remote? (Y/n): "
-if /i "!C3!"=="n" goto :done
+choice /c YN /n /m "Push to remote? (Y/n): "
+if !errorlevel! equ 2 goto :push_done
 
 set "I=0"
 :push
 set /a I+=1
-if !I! gtr %RC% goto :done
+if !I! gtr %RC% goto :push_done
 set "P=!R%I%!"
 for %%N in ("!P!") do set "N=%%~nxN"
 set "U=0"
+set "STASHED="
 pushd "!P!"
 for /f %%C in ('git log --oneline "@{u}..HEAD" 2^>nul ^| find /c /v ""') do set "U=%%C"
 if not !U! gtr 0 goto :push_skip
 echo [!N!] pushing !U! commit(s)...
-git push 2>&1
+git push >nul 2>&1
+if !errorlevel! equ 0 (
+    echo   [OK]
+    goto :push_next
+)
+echo   [RETRY] fetch + rebase then push again...
+git stash --include-untracked >nul 2>&1
+if !errorlevel! equ 0 (
+    set "STASHED=1"
+) else (
+    set "STASHED="
+)
+git fetch --all >nul 2>&1
+if !errorlevel! neq 0 (
+    echo   [FAIL] fetch
+    if defined STASHED (
+        git stash pop >nul 2>&1
+        if !errorlevel! neq 0 (
+            echo   [WARN] stash pop conflict, dropping stash
+            git checkout -- . >nul 2>&1
+            git clean -fd >nul 2>&1
+            git stash drop >nul 2>&1
+        )
+    )
+    set "FL=!FL! !N!"
+    goto :push_next
+)
+git rebase >nul 2>&1
+if !errorlevel! neq 0 (
+    echo   [CONFLICT] rebase conflict, push aborted
+    git rebase --abort >nul 2>&1
+    if defined STASHED (
+        git stash pop >nul 2>&1
+        if !errorlevel! neq 0 (
+            echo   [WARN] stash pop conflict, dropping stash
+            git checkout -- . >nul 2>&1
+            git clean -fd >nul 2>&1
+            git stash drop >nul 2>&1
+        )
+    )
+    set "FL=!FL! !N!"
+    goto :push_next
+)
+if defined STASHED (
+    git stash pop >nul 2>&1
+    if !errorlevel! neq 0 (
+        echo   [WARN] stash pop conflict, dropping stash
+        git checkout -- . >nul 2>&1
+        git clean -fd >nul 2>&1
+        git stash drop >nul 2>&1
+    )
+)
+git push >nul 2>&1
 if !errorlevel! neq 0 (
     echo   [FAIL] push
     set "FL=!FL! !N!"
 ) else (
-    echo   [OK]
+    echo   [OK] push after rebase
 )
 goto :push_next
 :push_skip
@@ -189,7 +267,7 @@ echo [!N!] up to date
 popd
 goto :push
 
-:done
+:push_done
 echo.
 echo ============================================
 if defined FL (
@@ -199,4 +277,10 @@ if defined FL (
 )
 echo ============================================
 echo.
+set "FL="
+goto :menu
+
+:exit
+echo.
 pause
+exit /b 0
