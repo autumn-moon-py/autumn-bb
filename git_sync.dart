@@ -5,7 +5,7 @@ String _repoDir() {
   return scriptFile.parent.path;
 }
 
-/// 执行 git 命令。返回 exitCode；非零时已打印错误并等待按键。
+/// 执行 git 命令。返回 exitCode；非零时已打印错误。
 int runGit(String cmd, List<String> args) {
   final result = Process.runSync(
     'git',
@@ -25,9 +25,6 @@ int runGit(String cmd, List<String> args) {
       // ignore: avoid_print
       print(stderrStr);
     }
-    // ignore: avoid_print
-    print('操作失败，按任意键返回菜单...');
-    stdin.readByteSync();
     return result.exitCode;
   }
   return 0;
@@ -74,7 +71,6 @@ void actionRebasePull() {
       // ignore: avoid_print
       print(statusResult.stderr);
     }
-    _pause();
     return;
   }
   final hasLocalChanges = statusResult.stdout.toString().isNotEmpty;
@@ -114,7 +110,6 @@ void actionRebasePull() {
 
   // ignore: avoid_print
   print('完成');
-  _pause();
 }
 
 void actionCommitAndPush() {
@@ -132,7 +127,6 @@ void actionCommitAndPush() {
   if (names.isEmpty) {
     // ignore: avoid_print
     print('无变更');
-    _pause();
     return;
   }
   final fileCount = names.split('\n').length;
@@ -143,7 +137,6 @@ void actionCommitAndPush() {
 
   // ignore: avoid_print
   print('完成');
-  _pause();
 }
 
 void main() {
@@ -179,7 +172,6 @@ void main() {
       actionCommitAndPush();
     } else if (choice == '3') {
       runGit('status', []);
-      _pause();
     } else if (choice == '4') {
       // ignore: avoid_print
       print('再见');
@@ -190,10 +182,4 @@ void main() {
     }
     // 空输入：直接重新显示菜单，不打"无效输入"
   }
-}
-
-void _pause() {
-  // ignore: avoid_print
-  print('按任意键继续...');
-  stdin.readByteSync();
 }
