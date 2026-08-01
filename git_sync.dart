@@ -172,25 +172,23 @@ void main() {
       return;
     }
 
-    switch (input.trim()) {
-      case '1':
-        actionRebasePull();
-        break;
-      case '2':
-        actionCommitAndPush();
-        break;
-      case '3':
-        runGit('status', []);
-        _pause();
-        break;
-      case '4':
-        // ignore: avoid_print
-        print('再见');
-        return;
-      default:
-        // ignore: avoid_print
-        print('无效输入');
+    final choice = input.trim();
+    if (choice == '1') {
+      actionRebasePull();
+    } else if (choice == '2') {
+      actionCommitAndPush();
+    } else if (choice == '3') {
+      runGit('status', []);
+      _pause();
+    } else if (choice == '4') {
+      // ignore: avoid_print
+      print('再见');
+      return;
+    } else if (choice.isNotEmpty) {
+      // ignore: avoid_print
+      print('无效输入');
     }
+    // 空输入：直接重新显示菜单，不打"无效输入"
   }
 }
 
